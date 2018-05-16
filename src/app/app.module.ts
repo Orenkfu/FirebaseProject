@@ -7,8 +7,8 @@ import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
-import {AngularFireDatabaseModule} from 'angularfire2/database';
-import {AngularFireAuthModule} from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { RouterModule, CanActivate } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -22,13 +22,14 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
 import { AdminOrderesComponent } from './admin/admin-orderes/admin-orderes.component';
 import { LoginComponent } from './login/login.component';
-import { NgbModule }from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
 import { ProductService } from './product.service';
 import { CustomFormsModule } from 'ng2-validation';
 import { FilterService } from './filter.service';
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { ShoppingCartService } from './shopping-cart.service';
 
 
 
@@ -65,8 +66,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
         component: HomeComponent
       },
       {
-      path: 'login',
-      component: LoginComponent
+        path: 'login',
+        component: LoginComponent
       },
       {
         path: 'products',
@@ -94,28 +95,28 @@ import { ProductCardComponent } from './product-card/product-card.component';
 
       },
       {
-        path: 'admin/products/new', 
+        path: 'admin/products/new',
         component: ProductFormComponent,
         canActivate: [AuthGuard, AdminAuthGuard]
       },
       {
-        path: 'admin/products/:id', 
+        path: 'admin/products/:id',
         component: ProductFormComponent,
         canActivate: [AuthGuard, AdminAuthGuard]
       },
       {
-        path: 'admin/orders', 
+        path: 'admin/orders',
         component: AdminOrderesComponent,
         canActivate: [AuthGuard, AdminAuthGuard]
       },
       {
-        path: 'admin/products', 
+        path: 'admin/products',
         component: AdminProductsComponent,
         canActivate: [AuthGuard, AdminAuthGuard]
       }
     ])
   ],
-  providers: [AuthService, AuthGuard, UserService, FilterService, ProductService, AdminAuthGuard, CategoryService],
+  providers: [AuthService, AuthGuard, UserService, FilterService, ProductService, AdminAuthGuard, CategoryService, ShoppingCartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

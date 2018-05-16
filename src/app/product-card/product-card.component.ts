@@ -7,20 +7,22 @@ import { ShoppingCartService } from '../shopping-cart.service';
   templateUrl: './product-card.component.html',
   styleUrls: ['./product-card.component.css']
 })
-export class ProductCardComponent{
+export class ProductCardComponent {
   constructor(private cartService: ShoppingCartService) { }
 
 
-@Input('product') product: Product[]; 
-@Input('show-actions') showActions = true;
+  @Input('product') product: Product[];
+  @Input('show-actions') showActions = true;
 
-addToCart(product: Product) { 
-  let cartId = localStorage.getItem('cartId');
-  if (!cartId){
+  addToCart(product: Product) {
+    let cartId = localStorage.getItem('cartId');
+    if (!cartId) {
+      this.cartService.create().then(result => {
+        localStorage.setItem('cartId', result.key);
+      });
+    } else {
 
+    }
   }
-}
 
-
- 
 }
