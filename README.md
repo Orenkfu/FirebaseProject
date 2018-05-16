@@ -24,7 +24,7 @@ then deploy webpack with "ng serve" command.
 
 ## Firebase server
 
-The application is deployed to Firebase servers and can be viewed real time from the browser at : ** https://fir-demo-a1b64.firebaseapp.com **
+The application is deployed to Firebase servers and can be viewed real time from the browser at : **https://fir-demo-a1b64.firebaseapp.com**
 
 ### Known issues:
 
