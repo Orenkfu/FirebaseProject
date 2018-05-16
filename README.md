@@ -1,27 +1,31 @@
-# FirebaseDemo
+# O Shop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+A home-made project simulating a grocery e-store.
 
-## Development server
+## Angular version
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+clone the repo, open angular folder with prefered editor, and run the npm command "npm install" to install dependencies.
+then deploy webpack with "ng serve" command.
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* As admin, you are able to create or update products using a 'template' form that will simulate the final result pre-commit.
 
-## Build
+* A reactive navbar which will react to your authentication and authorization status.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+* Log in using your google account through google's Login API.
 
-## Running unit tests
+* View changes in real time using angular's observable pattern combined with Firebase's real-time nature.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+*In development: store your "desired products" in a shopping cart for later check-out.
 
-## Running end-to-end tests
+*In development: Check out your final orders. 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Firebase server
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The application is deployed to Firebase servers and can be viewed real time from the browser at : ** https://fir-demo-a1b64.firebaseapp.com **
+
+### Known issues:
+
+As of now, authenticating with your user account will not grant you admin grants and the only way to view the Admin page is by manually changing user authorization on the back-end.
