@@ -17,9 +17,9 @@ then deploy webpack with "ng serve" command.
 
 * View changes in real time using angular's observable pattern combined with Firebase's real-time nature.
 
-*In development: store your "desired products" in a shopping cart for later check-out.
+* In development: store your "desired products" in a shopping cart for later check-out.
 
-*In development: Check out your final orders. 
+* In development: Check out your final orders. 
 
 
 ## Firebase server
